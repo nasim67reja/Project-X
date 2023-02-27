@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { URL } from "../App";
 import "./card.scss";
 
 function Card({ imageSrc, logoSrc, title, description }) {
@@ -8,7 +9,7 @@ function Card({ imageSrc, logoSrc, title, description }) {
   };
   return (
     <div className="card">
-      <img src={imageSrc} alt="" />
+      <img src={`${URL}/${imageSrc}`} alt="" className="img"/>
       <div
         className="card-content"
         onMouseEnter={mouseEnterHandler}
